@@ -21,7 +21,8 @@ services:
 # Servicio web front y backend
   web:
     build:
-      context: ./backend
+      context: .
+      dockerfile: backend/dockerfile
     container_name: simi_web
     restart: always
     ports:
