@@ -9,6 +9,7 @@ const port = 80; // La rúbrica pide exponer la API en el puerto 80
 // Middleware
 app.use(cors());
 app.use(express.json());
+app.use(express.static(path.join(__dirname, '../frontend')));
 
 // Configuración de la conexión a PostgreSQL
 // En Docker, el host será el nombre del servicio de la BD (ej. 'postgres-db')
